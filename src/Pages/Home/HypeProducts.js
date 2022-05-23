@@ -9,29 +9,29 @@ const HypeProducts = () => {
         {
             _id: 1,
             name: 'Brandix Spark Plug Kit',
-            description: 'Many philosophical debates that began in ancient times are still debated today. In one general sense.',
+            description: 'Many philosophical debates that began in ancient times.',
             img: parts1
         },
         {
             _id: 2,
             name: 'Brandix Clutch Discs ',
-            description: 'In one general sense, philosophy is associated with wisdom, intellectual culture and a search for knowledge.',
+            description: 'In one general sense, philosophy is associated with wisdom.',
             img: parts2
         },
         {
             _id: 3,
             name: 'Aluminium Wheel',
-            description: 'Many philosophical debates that began in ancient times are still debated today. In one general sense.',
+            description: 'Many philosophical debates that began in ancient times.',
             img: parts3
         }
     ];
 
     return (
-        <div className='my-28 mx-20'>
+        <div className='my-28 mx-28'>
             <div className='text-center text-5xl uppercase'>
                 <h2 className='text-primary'>Our Most Hype Product</h2>
             </div>
-            <div className='grid sm:grid-cols-1 lg:grid-cols-3 gap-10'>
+            <div className='grid sm:grid-cols-1 lg:grid-cols-3 gap-12'>
                 {
                     hypeProducts.map(hypeProduct => <HypeProduct
                         key={hypeProduct._id}

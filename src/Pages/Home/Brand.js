@@ -3,8 +3,12 @@ import brand from '../../img/brand.png'
 
 const Brand = () => {
     return (
-        <div className='ml-28 my-28'>
-            <img src={brand} alt="" />
+        <div class="card text-neutral-content my-20">
+            <div class="card-body items-center text-center">
+
+
+                <img src={brand} alt="" />
+            </div>
         </div>
     );
 };

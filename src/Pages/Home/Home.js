@@ -3,9 +3,11 @@ import Footer from '../Shared/Footer';
 import Banner from './Banner';
 import Brand from './Brand';
 import BusnissSummary from './BusnissSummary';
+import Discount from './Discount';
 import HypeProducts from './HypeProducts';
 import Img from './Img';
 import Info from './Info';
+import Off from './Off';
 import Steps from './Steps';
 import Warning from './Warning';
 
@@ -20,6 +22,8 @@ const Home = () => {
             <BusnissSummary></BusnissSummary>
             <Info></Info>
             <Brand></Brand>
+            <Off></Off>
+            <Discount></Discount>
             <Img></Img>
             <Footer></Footer>
         </div>
