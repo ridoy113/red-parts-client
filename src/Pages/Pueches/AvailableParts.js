@@ -7,7 +7,7 @@ const AvailableParts = () => {
     const [product, setProduct] = useState(null);
 
     useEffect(() => {
-        fetch('parts.json')
+        fetch('http://localhost:5000/part')
             .then(res => res.json())
             .then(data => setParts(data));
     }, [])
@@ -24,9 +24,9 @@ const AvailableParts = () => {
                     ></Part>)
                 }
             </div>
-            {product&& <ByeModal 
-            product={product}
-            setProduct={setProduct}
+            {product && <ByeModal
+                product={product}
+                setProduct={setProduct}
             ></ByeModal>}
         </div>
     );
