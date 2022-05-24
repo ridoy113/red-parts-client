@@ -12,7 +12,7 @@ const Info = () => {
                 info="Abidpour,Bourichong,Comilla,Bangladesh"
                 cardTitle="Our Locations" img={marker}></InfoCard>
             <InfoCard
-                bgClass="bg-secondary"
+                bgClass="bg-neutral"
                 info="almamounhridoy113@gmail.com 
                 or
                 0187077907687"
