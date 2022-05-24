@@ -4,15 +4,17 @@ import { Routes, Route, Link } from "react-router-dom";
 import Home from './Pages/Home/Home';
 import Blogs from './Pages/Home/Blogs';
 import Login from './Pages/Login/Login';
+import Purches from './Pages/Pueches/Purches';
 
 function App() {
   return (
-    <div>
+    <div className='max-w-10xl mx-auto '>
       <Navbar></Navbar>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/blog" element={<Blogs />} />
-        <Route path="/login" element={<Login />} />
+        <Route path="blog" element={<Blogs />} />
+        <Route path="purches" element={<Purches></Purches>} />
+        <Route path="login" element={<Login />} />
 
       </Routes>
     </div>

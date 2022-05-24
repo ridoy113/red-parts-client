@@ -10,7 +10,7 @@ const Warning = () => {
                     <div>
                         <h1 class="text-5xl font-bold text-primary"><span className='text-accent'>This Site For </span><br />  Manufacturer Car Parts🚗 </h1>
                         <p class="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
-                        <button class="btn btn-primary">Get Started</button>
+                        <button class="btn btn-primary rounded-none">Get Started</button>
                     </div>
                 </div>
             </div>
