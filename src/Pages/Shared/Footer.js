@@ -1,11 +1,14 @@
 import React from 'react';
+import logo2 from '../../img/logo2.png'
 
 const Footer = () => {
     return (
-        <div className='bg-base-200 '>
+        <div className='bg-base-300'>
             <footer class="footer p-10 text-base-content ">
                 <div>
-                    <span class="footer-title">Services</span>
+                    <span class="footer-title">
+                        <img src={logo2} alt="" />
+                    </span>
                     <a class="link link-hover">Branding</a>
                     <a class="link link-hover">Design</a>
                     <a class="link link-hover">Marketing</a>

@@ -1,0 +1,110 @@
+[
+    {
+        "_id": 1,
+        "name": "Brandix Spark Plug Kit",
+        "img": "https://i.ibb.co/Jn4Wc6B/parts6.png",
+        "slots": [
+            "50",
+            "100",
+            "150",
+            "200",
+            "250",
+            "300",
+            "350",
+            "400",
+            "450",
+            "500"
+        ],
+        "discription": "Many philosophical debates that began in ancient times are still debated today"
+    },
+    {
+        "_id": 2,
+        "name": "Brandix Brake Kit",
+        "img": "https://i.ibb.co/VH6w51S/parts5.png",
+        "slots": [
+            "50",
+            "100",
+            "150",
+            "200",
+            "250",
+            "300",
+            "350",
+            "400",
+            "450",
+            "500"
+        ],
+        "discription": "Intellectual culture and a search for knowledge."
+    },
+    {
+        "_id": 3,
+        "name": "Left Headlight Of Brandix",
+        "img": "https://i.ibb.co/7QcBkHp/parts4.png",
+        "slots": [
+            "50",
+            "100",
+            "150",
+            "200",
+            "250",
+            "300",
+            "350",
+            "400",
+            "450",
+            "500"
+        ],
+        "discription": "In one general sense, philosophy is associated with wisdom"
+    },
+    {
+        "_id": 4,
+        "name": "Glossy Gray 19' Aluminium Wheel",
+        "img": "https://i.ibb.co/VMQKYKr/parts3.png",
+        "slots": [
+            "50",
+            "100",
+            "150",
+            "200",
+            "250",
+            "300",
+            "350",
+            "400",
+            "450",
+            "500"
+        ],
+        "discription": "Many philosophical debates that began in ancient times are still debated today."
+    },
+    {
+        "_id": 5,
+        "name": "Brandix Manual Five Speed Gearbox",
+        "img": "https://i.ibb.co/zfnTdqj/parts2.png",
+        "slots": [
+            "50",
+            "100",
+            "150",
+            "200",
+            "250",
+            "300",
+            "350",
+            "400",
+            "450",
+            "500"
+        ],
+        "discription": "Intellectual culture and a search for knowledge."
+    },
+    {
+        "_id": 6,
+        "name": "Taillights Brandix Z54",
+        "img": "https://i.ibb.co/mbDpdQD/parts1.png",
+        "slots": [
+            "50",
+            "100",
+            "150",
+            "200",
+            "250",
+            "300",
+            "350",
+            "400",
+            "450",
+            "500"
+        ],
+        "discription": "In one general sense, philosophy is associated with wisdom, intellectual culture and a search"
+    }
+]

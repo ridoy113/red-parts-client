@@ -9,7 +9,7 @@ module.exports = {
       {
         cartheme: {
           primary: "#E52727",
-          secondary: "#ffc1c1",
+          secondary: "#FF6347",
           accent: "#333333",
           neutral: "#3d4451",
           "base-100": "#ffffff",
