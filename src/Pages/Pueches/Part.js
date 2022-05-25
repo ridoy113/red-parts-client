@@ -19,7 +19,7 @@ const Part = ({ part, setProduct }) => {
                 <div class="card-actions">
 
                     <label
-                        for="bye-modal"
+                        htmlFor="bye-modal"
                         onClick={() => setProduct(part)}
                         class="btn gap-2 btn-primary rounded-none px-10">
                         Bye Now

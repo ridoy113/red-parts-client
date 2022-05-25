@@ -29,7 +29,6 @@ const Home = () => {
             <Discount></Discount>
             <Img></Img>
             <Contact></Contact>
-            <Footer></Footer>
         </div>
     );
 };

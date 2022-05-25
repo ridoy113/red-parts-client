@@ -10,7 +10,6 @@ const Purches = () => {
                 <PurchesBanner></PurchesBanner>
                 <AvailableParts></AvailableParts>
             </div>
-            <Footer></Footer>
         </div>
     );
 };
