@@ -7,7 +7,7 @@ import logo from '../../img/logo.jpg'
 
 const Navbar = () => {
 
-    const [user, loading, error] = useAuthState(auth);
+    const [user] = useAuthState(auth);
 
     const logout = () => {
         signOut(auth)
@@ -18,6 +18,11 @@ const Navbar = () => {
         <li><Link to="/purches">Purches</Link></li>
         <li><Link to="/portfolio">My Portfolio</Link></li>
         <li><Link to="/blog">Blogs</Link></li>
+
+        {
+            user && <li><Link to="/dashboard">Dashboard</Link></li>
+        }
+
         <li>{user ? <button class="btn btn-ghost" onClick={logout}>Sign Out</button> : <Link to="/login">LogIn</Link>}</li>
     </>
 
@@ -40,7 +45,13 @@ const Navbar = () => {
                         {menuItems}
                     </ul>
                 </div>
+                <div className="navbar-end">
+                    <label tabindex="1" for="dashboard-sidebar" class="btn btn-ghost lg:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+                    </label>
+                </div>
             </div>
+
         </div>
     );
 };

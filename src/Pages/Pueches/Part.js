@@ -14,7 +14,7 @@ const Part = ({ part, setProduct }) => {
                         ? <span>{slots[0]}pic make 1 bundle</span>
                         : <span>No</span>
                 }</p>
-                <p><small>{slots.length} bundles available</small></p>
+                <p><small>{slots.length} bundles available for you</small></p>
                 <p>{discription}</p>
                 <div class="card-actions">
 

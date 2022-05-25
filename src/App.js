@@ -8,6 +8,12 @@ import Purches from './Pages/Pueches/Purches';
 import Footer from './Pages/Shared/Footer';
 import SignUp from './Pages/Login/SignUp';
 import RequireAuth from './Pages/Login/RequireAuth';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import Dashboard from './Pages/Dashboard/Dashboard';
+import MyOrders from './Pages/Dashboard/MyOrders';
+
+
 
 function App() {
   return (
@@ -16,11 +22,21 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="blog" element={<Blogs />} />
+
         <Route path="purches" element={
           <RequireAuth>
             <Purches></Purches>
           </RequireAuth>
         } />
+
+        <Route path="dashboard" element={<RequireAuth><Dashboard /></RequireAuth>} >
+          <Route index element={<MyOrders></MyOrders>}></Route>
+          
+        </Route>
+
+
+
+
         <Route path="login" element={<Login />} />
         <Route path="signup" element={<SignUp />} />
 
@@ -30,6 +46,7 @@ function App() {
 
 
       <Footer></Footer>
+      <ToastContainer />
     </div>
   );
 }

@@ -1,6 +1,7 @@
 import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
+import { toast } from 'react-toastify';
 
 const ByeModal = ({ product, setProduct }) => {
 
@@ -10,8 +11,37 @@ const ByeModal = ({ product, setProduct }) => {
     const handleBye = event => {
         event.preventDefault();
         const slot = event.target.slot.value;
-        console.log(_id, name, slot);
-        setProduct(null);
+
+        const bye = {
+            partId: _id,
+            part: name,
+            slot,
+            customer: user.email,
+            customerName: user.displayName,
+            phone: event.target.phone.value
+        }
+
+        fetch('http://localhost:5000/bye', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(bye)
+        })
+            .then(res => res.json())
+            .then(data => {
+
+                console.log(data);
+                if (data.success) {
+                    toast(`${slot} pic parts order complete`)
+                }
+                else {
+                    toast(`${slot} pic parts order complete`)
+                }
+                setProduct(null);
+            })
+
+
     }
 
     return (
