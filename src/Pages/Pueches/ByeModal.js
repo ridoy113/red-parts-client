@@ -21,7 +21,7 @@ const ByeModal = ({ product, setProduct }) => {
             phone: event.target.phone.value
         }
 
-        fetch('http://localhost:5000/bye', {
+        fetch('https://serene-badlands-91415.herokuapp.com/bye', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

@@ -7,7 +7,7 @@ const AvailableParts = () => {
     const [product, setProduct] = useState(null);
 
     useEffect(() => {
-        fetch('http://localhost:5000/part')
+        fetch('https://serene-badlands-91415.herokuapp.com/part')
             .then(res => res.json())
             .then(data => setParts(data));
     }, [])

@@ -4,6 +4,7 @@ import Banner from './Banner';
 import Brand from './Brand';
 import BusnissSummary from './BusnissSummary';
 import Contact from './Contact';
+import CustomerReviews from './CustomerReviews';
 import Devider from './Devider';
 import Discount from './Discount';
 import HypeProducts from './HypeProducts';
@@ -29,6 +30,7 @@ const Home = () => {
             <Discount></Discount>
             <Img></Img>
             <Contact></Contact>
+            <CustomerReviews></CustomerReviews>
         </div>
     );
 };
