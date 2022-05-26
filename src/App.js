@@ -12,6 +12,7 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Dashboard from './Pages/Dashboard/Dashboard';
 import MyOrders from './Pages/Dashboard/MyOrders';
+import Users from './Pages/Dashboard/Users';
 
 
 
@@ -31,7 +32,8 @@ function App() {
 
         <Route path="dashboard" element={<RequireAuth><Dashboard /></RequireAuth>} >
           <Route index element={<MyOrders></MyOrders>}></Route>
-          
+          <Route path='users' element={<Users></Users>}></Route>
+
         </Route>
 
 
