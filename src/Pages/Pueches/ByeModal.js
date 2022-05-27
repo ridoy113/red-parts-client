@@ -5,8 +5,8 @@ import { toast } from 'react-toastify';
 
 const ByeModal = ({ product, setProduct }) => {
 
-    const { _id, name, slots } = product;
-    const [user, loading, error] = useAuthState(auth);
+    const { _id, name, slots, price } = product;
+    const [user] = useAuthState(auth);
 
     const handleBye = event => {
         event.preventDefault();
@@ -16,6 +16,7 @@ const ByeModal = ({ product, setProduct }) => {
             partId: _id,
             part: name,
             slot,
+            price: price * slot,
             customer: user.email,
             customerName: user.displayName,
             phone: event.target.phone.value

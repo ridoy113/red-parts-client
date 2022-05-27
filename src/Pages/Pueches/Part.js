@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Part = ({ part, setProduct }) => {
-    const { name, img, slots, discription } = part;
+    const { name, img, slots, discription, price } = part;
     return (
         <div class="card lg:max-w-lg bg-base-100 shadow-xl">
             <figure class="px-10 pt-10">
@@ -15,6 +15,7 @@ const Part = ({ part, setProduct }) => {
                         : <span>No</span>
                 }</p>
                 <p><small>{slots.length} bundles available for you</small></p>
+                <p className='text-xl'>Price Of Single Pics: ${price}</p>
                 <p>{discription}</p>
                 <div class="card-actions">
 

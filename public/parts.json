@@ -2,6 +2,7 @@
     {
         "_id": 1,
         "name": "Brandix Spark Plug Kit",
+        "price": 500,
         "img": "https://i.ibb.co/Jn4Wc6B/parts6.png",
         "slots": [
             "50",
@@ -20,6 +21,7 @@
     {
         "_id": 2,
         "name": "Brandix Brake Kit",
+        "price": 700,
         "img": "https://i.ibb.co/VH6w51S/parts5.png",
         "slots": [
             "50",
@@ -38,6 +40,7 @@
     {
         "_id": 3,
         "name": "Left Headlight Of Brandix",
+        "price": 800,
         "img": "https://i.ibb.co/7QcBkHp/parts4.png",
         "slots": [
             "50",
@@ -56,6 +59,7 @@
     {
         "_id": 4,
         "name": "Glossy Gray 19' Aluminium Wheel",
+        "price": 900,
         "img": "https://i.ibb.co/VMQKYKr/parts3.png",
         "slots": [
             "50",
@@ -74,6 +78,7 @@
     {
         "_id": 5,
         "name": "Brandix Manual Five Speed Gearbox",
+        "price": 300,
         "img": "https://i.ibb.co/zfnTdqj/parts2.png",
         "slots": [
             "50",
@@ -92,6 +97,7 @@
     {
         "_id": 6,
         "name": "Taillights Brandix Z54",
+        "price": 360,
         "img": "https://i.ibb.co/mbDpdQD/parts1.png",
         "slots": [
             "50",
