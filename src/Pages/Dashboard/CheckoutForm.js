@@ -1,17 +1,20 @@
 import { CardElement, useElements, useStripe } from '@stripe/react-stripe-js';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 const CheckoutForm = ({ purches }) => {
 
     const stripe = useStripe();
     const elements = useElements();
     const [cardError, setCardError] = useState('');
+    const [success, setSuccess] = useState('');
+    const [processing, setProcessing] = useState(false);
+    const [transactionId, setTransactionId] = useState('');
     const [clientSecret, setClientSecret] = useState('');
 
-    const { price } = purches;
+    const { _id, price, customer, customerName } = purches;
 
 
-    useElements(() => {
+    useEffect(() => {
         fetch('http://localhost:5000/create-payment-intent', {
             method: 'POST',
             headers: {
@@ -30,6 +33,7 @@ const CheckoutForm = ({ purches }) => {
 
 
     }, [price])
+
 
     const handleSubmit = async (event) => {
         event.preventDefault();
@@ -51,9 +55,60 @@ const CheckoutForm = ({ purches }) => {
 
 
         setCardError(error?.message || '')
+        setSuccess('');
+        setProcessing(true);
 
+
+
+        const { paymentIntent, error: intentError } = await stripe.confirmCardPayment(
+            clientSecret,
+            {
+                payment_method: {
+                    card: card,
+                    billing_details: {
+                        name: customerName,
+                        email: customer
+                    },
+                },
+            },
+        );
+
+
+        if (intentError) {
+            setCardError(intentError?.message);
+            setProcessing(false);
+
+        }
+        else {
+            setCardError('');
+            setTransactionId(paymentIntent.id);
+            console.log(paymentIntent);
+            setSuccess('Congrats! your payment is completed')
+
+
+
+            const payment = {
+                order: _id,
+                transactionId: paymentIntent.id
+            }
+            fetch(`http://localhost:5000/bye/${_id}`, {
+                method: 'PATCH',
+                headers: {
+                    'content-type': 'application/json',
+                    'authorization': `Bearer ${localStorage.getItem('accessToken')}`
+                },
+                body: JSON.stringify(payment)
+
+            }).then(res => res.json())
+                .then(data => {
+                    setProcessing(false);
+                    console.log(data);
+                })
+        }
 
     }
+
+
     return (
         <>
             <form onSubmit={handleSubmit}>
@@ -73,12 +128,19 @@ const CheckoutForm = ({ purches }) => {
                         },
                     }}
                 />
+
                 <button className='btn btn-error btn-sm mt-4' type="submit" disabled={!stripe || !clientSecret}>
                     Pay
                 </button>
             </form>
             {
                 cardError && <p className='text-red-500'>{cardError}</p>
+            }
+            {
+                success && <div className='text-green-500'>
+                    <p>{success}</p>
+                    <p>Your Transaction Id: <span className='text-orange-500 font-bold'>{transactionId}</span></p>
+                </div>
             }
         </>
     );
