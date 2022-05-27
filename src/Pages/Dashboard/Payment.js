@@ -46,7 +46,7 @@ const Payment = () => {
                 <div class="card-body">
 
                     <Elements stripe={stripePromise}>
-                        <CheckoutForm />
+                        <CheckoutForm purches={purches} />
                     </Elements>
 
                 </div>
