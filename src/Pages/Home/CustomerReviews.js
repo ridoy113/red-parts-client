@@ -4,7 +4,7 @@ import Loading from '../Shared/Loading';
 import CustomerReview from './CustomerReview';
 
 const CustomerReviews = () => {
-    const { data: ratings, isLoading } = useQuery('ratings', () => fetch('http://localhost:5000/rating ', {
+    const { data: ratings, isLoading } = useQuery('ratings', () => fetch('https://serene-badlands-91415.herokuapp.com/rating ', {
         headers: {
             authorization: `Bearer ${localStorage.getItem('accessToken')}`
         }

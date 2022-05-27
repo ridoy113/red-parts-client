@@ -11,7 +11,7 @@ const stripePromise = loadStripe('pk_test_51L275SFOMMtWukazHdz1KhPdJEB6N1GWFA4re
 
 const Payment = () => {
     const { id } = useParams();
-    const url = `http://localhost:5000/bye/${id}`;
+    const url = `https://serene-badlands-91415.herokuapp.com/bye/${id}`;
 
 
     const { data: purches, isLoading } = useQuery(['bye', id], () => fetch(url, {

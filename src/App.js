@@ -16,6 +16,7 @@ import Users from './Pages/Dashboard/Users';
 import RequireAdmin from './Pages/Login/RequireAdmin';
 import AddRatings from './Pages/Dashboard/AddRatings';
 import Payment from './Pages/Dashboard/Payment';
+import MyPortdolio from './Pages/MyPortdolio';
 
 
 
@@ -26,6 +27,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="blog" element={<Blogs />} />
+        <Route path="portfolio" element={<MyPortdolio></MyPortdolio>} />
 
         <Route path="purches" element={
           <RequireAuth>

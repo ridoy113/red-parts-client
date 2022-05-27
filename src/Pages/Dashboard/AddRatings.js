@@ -29,7 +29,7 @@ const AddRatings = () => {
                         img: img
                     }
 
-                    fetch('http://localhost:5000/rating', {
+                    fetch('https://serene-badlands-91415.herokuapp.com/rating', {
                         method: 'POST',
                         headers: {
                             'content-type': 'application/json',

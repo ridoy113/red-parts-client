@@ -15,7 +15,7 @@ const CheckoutForm = ({ purches }) => {
 
 
     useEffect(() => {
-        fetch('http://localhost:5000/create-payment-intent', {
+        fetch('https://serene-badlands-91415.herokuapp.com/create-payment-intent', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',
@@ -91,7 +91,7 @@ const CheckoutForm = ({ purches }) => {
                 order: _id,
                 transactionId: paymentIntent.id
             }
-            fetch(`http://localhost:5000/bye/${_id}`, {
+            fetch(`https://serene-badlands-91415.herokuapp.com/bye/${_id}`, {
                 method: 'PATCH',
                 headers: {
                     'content-type': 'application/json',

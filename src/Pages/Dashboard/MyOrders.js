@@ -52,7 +52,7 @@ const MyOrders = () => {
                     </thead>
                     <tbody>
                         {
-                            orders.map((order, index) => <tr>
+                            orders.map((order, index) => <tr key={order._id}>
                                 <th>{index + 1}</th>
                                 <td>{order.customerName}</td>
                                 <td>{order.part}</td>
@@ -67,7 +67,10 @@ const MyOrders = () => {
                                     }
                                     {
                                         (order.price && order.paid) &&
-                                        <span className='text-secondary'>Paid</span>
+                                        <div>
+                                            <p> <span className='text-secondary'>Paid</span></p>
+                                            <p>Transaction Id: <span className='text-primary'>{order.transactionId}</span></p>
+                                        </div>
                                     }
                                 </td>
                             </tr>)
